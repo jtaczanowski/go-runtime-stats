@@ -1,9 +1,3 @@
-# go-runtime-stats
-go-runtime-stats - Golang package providing publishing go runtime metrics to graphite server. [![Build Status](https://travis-ci.org/jtaczanowski/go-runtime-stats.png?branch=master)](https://travis-ci.org/jtaczanowski/go-runtime-stats)
-
-Example usage:
-
-```go
 package main
 
 import "github.com/jtaczanowski/go-runtime-stats"
@@ -22,4 +16,3 @@ func main() {
 	// insted of empty select (used for block) put your code
 	select {}
 }
-```
