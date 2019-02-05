@@ -8,8 +8,7 @@ import (
 	"github.com/jtaczanowski/go-runtime-stats/api"
 	"github.com/jtaczanowski/go-runtime-stats/collector"
 	"github.com/jtaczanowski/go-runtime-stats/publisher"
-
-	scheduler "github.com/jtaczanowski/goscheduler"
+	"github.com/jtaczanowski/go-scheduler"
 )
 
 type Config struct {
