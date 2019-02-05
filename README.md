@@ -1,5 +1,6 @@
-# go-runtime-stats
-go-runtime-stats - Golang package providing publishing go runtime metrics to graphite server. [![Build Status](https://travis-ci.org/jtaczanowski/go-runtime-stats.png?branch=master)](https://travis-ci.org/jtaczanowski/go-runtime-stats)
+# go-runtime-stats [![Build Status](https://travis-ci.org/jtaczanowski/go-runtime-stats.png?branch=master)](https://travis-ci.org/jtaczanowski/go-runtime-stats)
+
+go-runtime-stats - Golang package providing publishing go runtime metrics to graphite server.
 
 Example usage:
 
