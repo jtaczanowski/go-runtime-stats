@@ -1,6 +1,8 @@
 language: go
 go: 
  - tip
+before_install:
+  - go get github.com/mattn/goveralls
 script:
  - go test -v ./...
  - go test -covermode=count ./... -coverprofile=profile.cov
