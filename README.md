@@ -2,11 +2,11 @@
 
 go-runtime-stats - Golang package providing collecting go runtime stats and sending it to graphite server.
 
-# Download 
+## Download 
 ```
 go get github.com/jtaczanowski/go-runtime-stats
 ```
-# Example usage (also included in _example catalog):
+## Example usage (also included in _example catalog):
 ```go
 package main
 
@@ -27,10 +27,10 @@ func main() {
 	select {}
 }
 ```
-# Example Grafana dashboard (JSON file included in _example catalog):
+## Example Grafana dashboard (JSON file included in _example catalog):
 ![alt text](_example/go-runtime-stats.png "Grafana Dashboard")
 
-# Metrics description:
+## Metrics description:
 | Metric                           | Source                           | Description                                                                                       | Unit               |
 |----------------------------------|----------------------------------|---------------------------------------------------------------------------------------------------|--------------------|
 | cpu.count                        | runtime.runtime.NumCPU()         | Number of machine CPU                                                                             | number of CPUs     |
