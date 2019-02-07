@@ -24,3 +24,6 @@ func main() {
 	select {}
 }
 ```
+
+
+![alt text](_example/go-runtime-stats.png "Grafana Dashboard")
