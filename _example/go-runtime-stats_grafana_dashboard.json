@@ -79,7 +79,8 @@
       "targets": [
         {
           "refId": "A",
-          "target": "example.prefix.gc.pause_last_ns"
+          "target": "metrics.prefix.gc.pause_last_ns",
+          "textEditor": true
         }
       ],
       "thresholds": "",
@@ -158,13 +159,8 @@
           "hide": false,
           "refCount": 0,
           "refId": "A",
-          "target": "integral(consolidateBy(example.prefix.gc.pause_ns_total_delta, 'sum'))"
-        },
-        {
-          "hide": true,
-          "refCount": 0,
-          "refId": "B",
-          "target": "example.prefix.gc.pause_ns_total"
+          "target": "integral(consolidateBy(metrics.prefix.gc.pause_ns_total_delta, 'sum'))",
+          "textEditor": true
         }
       ],
       "thresholds": "",
@@ -241,7 +237,8 @@
       "targets": [
         {
           "refId": "A",
-          "target": "example.prefix.gc.time_from_last_gc_s"
+          "target": "metrics.prefix.gc.time_from_last_gc_s",
+          "textEditor": true
         }
       ],
       "thresholds": "",
@@ -300,19 +297,22 @@
           "hide": false,
           "refCount": 0,
           "refId": "A",
-          "target": "aliasByMetric(example.prefix.mem.heap.alloc_bytes)"
+          "target": "aliasByMetric(metrics.prefix.mem.heap.alloc_bytes)",
+          "textEditor": true
         },
         {
           "hide": false,
           "refCount": 0,
           "refId": "C",
-          "target": "aliasByMetric(example.prefix.mem.heap.idle_bytes)"
+          "target": "aliasByMetric(metrics.prefix.mem.heap.idle_bytes)",
+          "textEditor": true
         },
         {
           "hide": false,
           "refCount": 0,
           "refId": "D",
-          "target": "aliasByMetric(example.prefix.mem.heap.sys_bytes)"
+          "target": "aliasByMetric(metrics.prefix.mem.heap.sys_bytes)",
+          "textEditor": true
         }
       ],
       "thresholds": [],
@@ -359,7 +359,7 @@
     {
       "aliasColors": {
         "goroutines_number": "#65c5db",
-        "example.prefix.cpu.goroutines_number": "#64b0c8"
+        "metrics.prefix.cpu.goroutines_number": "#64b0c8"
       },
       "bars": false,
       "dashLength": 10,
@@ -396,7 +396,8 @@
       "targets": [
         {
           "refId": "A",
-          "target": "aliasByMetric(example.prefix.cpu.goroutines_number)"
+          "target": "aliasByMetric(metrics.prefix.cpu.goroutines_number)",
+          "textEditor": true
         }
       ],
       "thresholds": [],
@@ -442,7 +443,7 @@
     },
     {
       "aliasColors": {
-        "example.prefix.mem.heap.objects_number": "#d683ce"
+        "metrics.prefix.mem.heap.objects_number": "#d683ce"
       },
       "bars": false,
       "dashLength": 10,
@@ -479,7 +480,8 @@
       "targets": [
         {
           "refId": "A",
-          "target": "example.prefix.mem.heap.objects_number"
+          "target": "metrics.prefix.mem.heap.objects_number",
+          "textEditor": true
         }
       ],
       "thresholds": [],
@@ -525,8 +527,9 @@
     },
     {
       "aliasColors": {
-        "consolidateBy(example.prefix.gc.pause_ns_total_delta,\"sum\")": "#bf1b00",
-        "example.prefix.gc.pause_ns": "#bf1b00",
+        "consolidateBy(metrics.prefix.gc.pause_ns_total_delta,\"sum\")": "#bf1b00",
+        "metrics.prefix.gc.pause_ns": "#bf1b00",
+        "pause_ns_total": "#ef843c",
         "pause_ns_total_delta": "#ef843c"
       },
       "bars": true,
@@ -559,7 +562,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "alias": "example.prefix.gc.pause_ns",
+          "alias": "metrics.prefix.gc.pause_ns",
           "transform": "negative-Y"
         }
       ],
@@ -570,8 +573,8 @@
         {
           "refCount": 0,
           "refId": "A",
-          "target": "aliasByMetric(consolidateBy(example.prefix.gc.pause_ns_total_delta, 'sum'))",
-          "textEditor": false
+          "target": "aliasByMetric(consolidateBy(derivative(metrics.prefix.gc.pause_ns_total), 'max'))",
+          "textEditor": true
         }
       ],
       "thresholds": [],
@@ -617,7 +620,9 @@
     },
     {
       "aliasColors": {
-        "example.prefix.gc.pause_ns": "#bf1b00",
+        "metrics.prefix.gc.pause_last_ns": "#ef843c",
+        "metrics.prefix.gc.pause_ns": "#bf1b00",
+        "pause_last_ns": "#ef843c",
         "pause_ns": "#ef843c"
       },
       "bars": true,
@@ -654,11 +659,8 @@
       "steppedLine": false,
       "targets": [
         {
-          "hide": false,
-          "refCount": 0,
-          "refId": "B",
-          "target": "aliasByMetric(consolidateBy(example.prefix.gc.pause_ns, 'sum'))",
-          "textEditor": false
+          "refId": "A",
+          "target": "aliasByMetric(metrics.prefix.gc.pause_last_ns)"
         }
       ],
       "thresholds": [],
@@ -704,7 +706,7 @@
     },
     {
       "aliasColors": {
-        "example.prefix.gc.number_delta": "#c15c17"
+        "metrics.prefix.gc.number_delta": "#c15c17"
       },
       "bars": true,
       "dashLength": 10,
@@ -741,7 +743,8 @@
       "targets": [
         {
           "refId": "A",
-          "target": "aliasByMetric(consolidateBy(example.prefix.gc.number_delta, 'max'))"
+          "target": "alias(consolidateBy(derivative(metrics.prefix.gc.number_total), 'max'), 'GC delta')",
+          "textEditor": true
         }
       ],
       "thresholds": [],
@@ -822,7 +825,8 @@
       "targets": [
         {
           "refId": "A",
-          "target": "aliasByMetric(consolidateBy(example.prefix.gc.time_from_last_gc_s, 'max'))"
+          "target": "aliasByMetric(consolidateBy(metrics.prefix.gc.time_from_last_gc_s, 'max'))",
+          "textEditor": true
         }
       ],
       "thresholds": [],
@@ -906,5 +910,5 @@
   "timezone": "",
   "title": "go-runtime-stats",
   "uid": "qa8C068mk",
-  "version": 58
+  "version": 62
 }
