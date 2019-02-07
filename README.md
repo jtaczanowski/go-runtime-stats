@@ -24,7 +24,6 @@ func main() {
 	select {}
 }
 ```
-
 ![alt text](_example/go-runtime-stats.png "Grafana Dashboard")
 
 | Metric                           | Source                           | Description                                                        | Unit               |
@@ -69,4 +68,7 @@ func main() {
 | gc.number_delta                  | runtime.ReadMemStats.HeapIdle    | Memory on the heap not in use          | bytes              |
 | gc.number_total                  | runtime.ReadMemStats.HeapInuse   | Memory on the heap in use              | bytes              |
 | gc.cpu_fraction_total            | runtime.ReadMemStats.HeapObjects | Total objects on the heap              | # Objects          |
+<<<<<<< HEAD
 >>>>>>> edit README.md
+=======
+>>>>>>> be7b727eb8839cdabf6cc3d2b6b6a2bb2f193e7b
