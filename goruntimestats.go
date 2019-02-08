@@ -29,7 +29,7 @@ func Start(config Config) {
 
 	scheduler.RunTaskAtInterval(collector.CollectStats, config.Interval, time.Second*0)
 
-	/* Run PublishToGraphite function every 10s, delay the first start by one second.
+	/* Run PublishToGraphite function every config.Interval, delay the first start by one second.
 	 * This time delay allows to runing PublishToGraphite function after CollectStats function.
 	 */
 	scheduler.RunTaskAtInterval(publisher.PublishToGraphite, config.Interval, time.Second*1)
