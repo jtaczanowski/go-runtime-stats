@@ -1,13 +1,14 @@
 package goruntimestats
 
 import (
-	"appstats/goruntimestats/scheduler"
 	"os"
 	"time"
 
+	"github.com/jtaczanowski/go-graphite-client"
 	"github.com/jtaczanowski/go-runtime-stats/api"
 	"github.com/jtaczanowski/go-runtime-stats/collector"
 	"github.com/jtaczanowski/go-runtime-stats/publisher"
+	"github.com/jtaczanowski/go-scheduler"
 )
 
 type Config struct {
