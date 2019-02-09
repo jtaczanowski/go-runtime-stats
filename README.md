@@ -10,7 +10,11 @@ go get github.com/jtaczanowski/go-runtime-stats
 ```go
 package main
 
-import "github.com/jtaczanowski/go-runtime-stats"
+import (
+	"time"
+
+	"github.com/jtaczanowski/go-runtime-stats"
+)
 
 func main() {
 	goruntimestats.Start(goruntimestats.Config{
@@ -18,7 +22,7 @@ func main() {
 		GraphitePort:     2003,
 		GraphiteProtocol: "udp",
 		GraphitePrefix:   "metrics.prefix",
-		Interval:         60,
+		Interval:         time.Second * 60,
 		HTTPOn:           true,
 		HTTPPort:         9999,
 	})
