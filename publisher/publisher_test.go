@@ -10,7 +10,7 @@ import (
 
 func TestShouldPrepareDataToSend(t *testing.T) {
 	testCollector := collector.NewCollector()
-	graphiteClient := graphite.NewGraphiteClient("localhost", 2003, "prefix", "udp")
+	graphiteClient := graphite.NewClient("localhost", 2003, "prefix", "udp")
 	testPublisher := NewPublisher(testCollector, graphiteClient)
 
 	excepted := []map[string]float64{

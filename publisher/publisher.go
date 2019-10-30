@@ -11,11 +11,11 @@ import (
 
 type Publisher struct {
 	collector *collector.Collector
-	graphite  *graphite.GraphiteClient
+	graphite  *graphite.Client
 }
 
 // NewPublisher - creates new Publisher struct
-func NewPublisher(collector *collector.Collector, graphite *graphite.GraphiteClient) *Publisher {
+func NewPublisher(collector *collector.Collector, graphite *graphite.Client) *Publisher {
 	return &Publisher{
 		collector: collector,
 		graphite:  graphite,

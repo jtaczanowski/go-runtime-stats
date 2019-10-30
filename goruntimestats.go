@@ -25,7 +25,7 @@ type Config struct {
 func Start(config Config) {
 	collector := collector.NewCollector()
 
-	graphite := graphite.NewGraphiteClient(config.GraphiteHost, config.GraphitePort, config.GraphitePrefix, config.GraphiteProtocol)
+	graphite := graphite.NewClient(config.GraphiteHost, config.GraphitePort, config.GraphitePrefix, config.GraphiteProtocol)
 	publisher := publisher.NewPublisher(collector, graphite)
 
 	scheduler.RunTaskAtInterval(collector.CollectStats, config.Interval, time.Second*0)
