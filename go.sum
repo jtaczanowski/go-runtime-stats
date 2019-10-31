@@ -1,4 +1,6 @@
 github.com/jtaczanowski/go-graphite-client v0.1.0 h1:F25XTYwf18mllp233SV/LTEZWN5vTy8JVnL/2JuzK1A=
 github.com/jtaczanowski/go-graphite-client v0.1.0/go.mod h1:K/Glts7ZyF9FYZ22s5wZJ4gCH5K7zif7+rGqLmdbSV8=
+github.com/jtaczanowski/go-graphite-client v1.0.0 h1:I0749tsXWyPYhFKGWhNnRvrwCWF6cyFFyCxdMRnNp9I=
+github.com/jtaczanowski/go-graphite-client v1.0.0/go.mod h1:K/Glts7ZyF9FYZ22s5wZJ4gCH5K7zif7+rGqLmdbSV8=
 github.com/jtaczanowski/go-scheduler v0.1.0 h1:aDcrHrhvM9i0AWxp3wrMwKKmZGjgykt8Afttcd7yC2w=
 github.com/jtaczanowski/go-scheduler v0.1.0/go.mod h1:yqdW4TW2f0pD2g5I/ngq4WHbdeKko7htm6i2DyXvEJs=

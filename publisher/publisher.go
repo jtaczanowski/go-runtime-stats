@@ -31,9 +31,9 @@ func (p *Publisher) PublishToGraphite() {
 }
 
 // prepareDataToSend - prepares data from Collector struct to graphite metric format
-func (p *Publisher) prepareDataToSend() []map[string]float64 {
+func (p *Publisher) prepareDataToSend() map[string]float64 {
 	var collectorMap map[string]map[string]int64
-	dataToGraphite := make([]map[string]float64, 0)
+	dataToGraphite := make(map[string]float64)
 
 	r, w := io.Pipe()
 	go func() {
@@ -46,7 +46,7 @@ func (p *Publisher) prepareDataToSend() []map[string]float64 {
 
 	for metricCategory := range collectorMap {
 		for metricName, metricValue := range collectorMap[metricCategory] {
-			dataToGraphite = append(dataToGraphite, map[string]float64{metricName: float64(metricValue)})
+			dataToGraphite[metricName] = float64(metricValue)
 		}
 	}
 	return dataToGraphite
