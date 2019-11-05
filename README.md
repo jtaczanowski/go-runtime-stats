@@ -1,4 +1,5 @@
-# go-runtime-stats [![Build Status](https://travis-ci.org/jtaczanowski/go-runtime-stats.png?branch=master)](https://travis-ci.org/jtaczanowski/go-runtime-stats) [![Coverage Status](https://coveralls.io/repos/github/jtaczanowski/go-runtime-stats/badge.svg?branch=master)](https://coveralls.io/github/jtaczanowski/go-runtime-stats?branch=master)
+# go-runtime-stats [![Build Status](https://travis-ci.org/jtaczanowski/go-runtime-stats.png?branch=master)](https://travis-ci.org/jtaczanowski/go-runtime-stats) [![Coverage Status](https://coveralls.io/repos/github/jtaczanowski/go-runtime-stats/badge.svg?branch=master)](https://coveralls.io/github/jtaczanowski/go-runtime-stats?branch=master) [![Go Report Card](https://goreportcard.com/badge/github.com/jtaczanowski/go-runtime-stats)](https://goreportcard.com/report/github.com/jtaczanowski/go-runtime-stats)
+
 
 go-runtime-stats - Golang package providing collecting go runtime stats (runtime.ReadMemStats()) and sending it to graphite server.
 
